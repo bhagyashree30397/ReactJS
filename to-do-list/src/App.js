@@ -14,7 +14,7 @@ const handleAddTask=()=>{
 setItemList((olditem)=>[...olditem,task])}
 }
 
-const handleCancelTask=(index)=>{
+const handleDeleteTask=(index)=>{
   const newList= [...itemList]
   newList.splice(index,1)
   setItemList(newList)
@@ -28,7 +28,7 @@ const handleCancelTask=(index)=>{
     <ul>
   {itemList.map((item,index)=>{return <li ket={item.id}>
     {item}&nbsp;
-    <button onClick={() => handleCancelTask(index)}>Cancel</button></li>})}
+    <button onClick={() => handleDeleteTask(index)}>Delete</button></li>})}
     </ul>
     </>
   );
